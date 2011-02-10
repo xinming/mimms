@@ -107,13 +107,14 @@ def download(options):
   if options.resume:
     if not stream.seekable():
       raise NotResumeableError
-
-  filename = get_filename(options)
-  if options.resume:
-    f = open(filename, "a")
-    stream.seek(f.tell())
-  else:
-    f = open(filename, "w")
+      
+  if not options.quiet:
+    filename = get_filename(options)
+    if options.resume:
+      f = open(filename, "a")
+      stream.seek(f.tell())
+    else:
+      f = open(filename, "w")
 
   clear = " " * len(status)
   status = "%s => %s" % (options.url, filename)
@@ -127,7 +128,10 @@ def download(options):
   bytes_per_second  = 0
 
   for data in stream:
-    f.write(data)
+    if options.quite:
+      sys.stdout.write(data)
+    else:
+      f.write(data)
 
     # keep track of the number of bytes handled in the current duration
     bytes_in_duration += len(data)
