@@ -128,7 +128,7 @@ def download(options):
   bytes_per_second  = 0
 
   for data in stream:
-    if options.quite:
+    if options.quiet:
       sys.stdout.write(data)
     else:
       f.write(data)
