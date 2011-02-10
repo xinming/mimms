@@ -1,0 +1,51 @@
+#!/usr/bin/make -f
+
+PYVERS=$(shell pyversions -vr)
+
+build: build-stamp
+
+build-stamp: $(PYVERS:%=build-python%)
+	touch $@
+
+build-python%:
+	dh_testdir
+	make PYTHON=python$*
+
+install: build install-stamp
+
+install-stamp: $(PYVERS:%=install-python%)
+	touch $@
+
+install-python%:
+	dh_testdir
+	dh_testroot
+	make PYTHON=python$* DESTDIR=$(CURDIR)/debian/mimms
+
+clean: $(PYVERS:%=clean-python%)
+	dh_testdir
+	dh_testroot
+	rm -rf build-stamp install-stamp
+	dh_clean 
+
+clean-python%:
+	dh_testdir
+	dh_testroot
+	make PYTHON=python$* clean
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_pycentral
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: build install
+
+binary: binary-indep binary-arch
+.PHONY: build install clean binary-indep binary-arch binary

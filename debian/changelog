@@ -1,0 +1,126 @@
+mimms (3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Modified build & dependencies slightly to make things leaner.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Tue, 15 Apr 2008 22:58:16 -0600
+
+mimms (3.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sun, 06 Apr 2008 11:34:07 -0600
+
+mimms (3.0-2) unstable; urgency=low
+
+  * Fix debhelper (and other) build dependencies (closes: #474377)
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sat, 05 Apr 2008 10:39:34 -0600
+
+mimms (3.0-1) unstable; urgency=low
+
+  * New upstream release
+    * Completely rewritten in python; no more C++ or Qt at all
+      (closes: #431701, #470982, #468406, #386291, #417678, #386398)
+    * Better timed recording support (closes: #471360)
+    * Supports resuming seekable downloads (closes: #387285)
+  * Updated package description (closes: #406469)
+  * Updated debian/watch
+  * Updated to Debian Policy 3.7.3
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Thu, 03 Apr 2008 22:58:33 -0600
+
+mimms (2.0.1-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Version build dependency on libmms-dev (Closes: #386398).
+  * Fix FTBFS with GCC 4.3 (Closes: #417678).
+
+ -- Luk Claes <luk@debian.org>  Fri, 14 Mar 2008 22:05:16 +0000
+
+mimms (2.0.1-1) unstable; urgency=low
+
+  * New upstream release (closes: #378806)
+  * No longer use libmms bug workarounds (fixes are now in libmms)
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Thu, 17 Aug 2006 14:15:21 -0600
+
+mimms (2.0.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Closes: #279165, #314818, #297214, #332537, #334076, #336187
+  * Standards-Version to 3.7.2.0; no changes necessary
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sun,  4 Jun 2006 20:10:02 -0600
+
+mimms (0.0.9-2) unstable; urgency=low
+
+  * C++ ABI transition 
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Fri,  5 Aug 2005 21:08:34 -0600
+
+mimms (0.0.9-1) unstable; urgency=low
+
+  * New upstream release
+    * Fixes unicode apostrohpe in manpage (closes: #276119)
+    * Works with more streams
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Fri, 22 Oct 2004 08:42:42 -0600
+
+mimms (0.0.8-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sun, 12 Sep 2004 11:35:49 -0600
+
+mimms (0.0.7-2) unstable; urgency=low
+
+  * Removed now irrelevant README.Debian
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sat, 11 Sep 2004 14:32:41 -0600
+
+mimms (0.0.7-1) unstable; urgency=low
+
+  * New upstream release
+    * Supports mms://host:port syntax (closes: #270805)
+    * Adds additional command line options (closes: #266670)
+  * Now build-depends on libpopt-dev and txt2man
+  * Updated standards-version to 3.6.1
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sat, 11 Sep 2004 14:16:24 -0600
+
+mimms (0.0.6-1) unstable; urgency=low
+
+  * New upstream release; now works with many more streams.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Thu, 13 May 2004 18:54:04 -0600
+
+mimms (0.0.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sat, 27 Mar 2004 14:57:14 -0700
+
+mimms (0.0.3-3) unstable; urgency=low
+
+  * Several changes suggested by Joe Wreschnig <piman@debian.org>:
+    * Added & verified missing copyright statements.
+    * Fixed segfault on 'mimms --help' or other bad args
+    * Removed compatibility symlink to mmsclient.
+    * Made output less verbose unless compiled for debug.
+    * Updated man page to reflect removed mmsclient symlink.
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sat, 27 Mar 2004 14:28:50 -0700
+
+mimms (0.0.3-2) unstable; urgency=low
+
+  * Gettextized the source for i18n
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Mon, 22 Mar 2004 15:46:01 -0700
+
+mimms (0.0.3-1) unstable; urgency=low
+
+  * Initial Release (closes: #221806)
+
+ -- Wesley J. Landaker <wjl@icecavern.net>  Sun,  7 Mar 2004 16:50:22 -0700
+

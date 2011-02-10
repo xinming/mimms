@@ -1,0 +1,33 @@
+mimms 3.2 released 2008-04-15
+---------
+
+  * Use SI units in progress bar, and native sizes in buffers.
+
+  * Removed libmms.Stream.data; instead, Stream can just be iterated.
+
+mimms 3.1 released 2008-04-06
+---------
+
+  * All implementation is refactored into libmimms. This makes it easier to
+    use mimms from other python programs.
+
+  * Compared to 3.0, this version is documented and commented much better.
+
+  * User interface (progress reporting, error messages, etc) improvements.
+
+mimms 3.0 released 2008-04-03
+---------
+
+  * Rewritten completely in python; most features work the same as they
+    used to, but there are some differences. For example, ASX parsing
+    from http URLs is not implemented (yet?) in this version.
+
+  * Lots of bug fixes and new features. For example, resume is fully now
+    implemented, timed downloading works better, progress indication is
+    improved, etc.
+
+Major version history:
+
+mimms 3.x -- rewritten in python, using libmms (2008)
+mimms 2.x -- rewritten in C++ with Qt, using libmms (2006)
+mimms 1.x -- forked from mmsclient, using internal mms (2004)

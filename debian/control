@@ -1,0 +1,19 @@
+Format: 3.0 (quilt)
+Source: mimms
+Section: net
+Priority: optional
+Maintainer: Wesley J. Landaker <wjl@icecavern.net>
+Build-Depends: debhelper (>= 6), python2.5-dev, python-central (>= 0.6)
+Standards-Version: 3.7.3
+XS-Python-Version: >= 2.5
+
+Package: mimms
+Architecture: all
+Depends: ${python:Depends}, libmms0
+XB-Python-Version: ${python:Versions}
+Description: mms (e.g. mms://) stream downloader
+ mimms is a program designed to allow you to download streams using the 
+ MMS protocol and save them to your computer, as opposed to watching them 
+ live. Similar functionality is available in full media player suites such 
+ as Xine, MPlayer, and VLC, but mimms is quick and easy to use, and for the 
+ time being, remains a useful program.
