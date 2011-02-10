@@ -107,9 +107,9 @@ def download(options):
   if options.resume:
     if not stream.seekable():
       raise NotResumeableError
-      
+  filename = get_filename(options)
+  
   if not options.quiet:
-    filename = get_filename(options)
     if options.resume:
       f = open(filename, "a")
       stream.seek(f.tell())
