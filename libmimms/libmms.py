@@ -22,8 +22,15 @@ exposes the mmsx interface, since this one is the most flexible.
 """
 
 from ctypes import *
+import platform
 
-libmms = cdll.LoadLibrary("libmms.so.0")
+if platform.system() == 'Darwin':
+  libmms = cdll.LoadLibrary("libmms.0.dylib") # for OS X
+else:
+  libmms = cdll.LoadLibrary("libmms.so.0")
+  
+# libmms = cdll.LoadLibrary("libmms.so.0")
+
 
 # opening and closing the stream
 libmms.mmsx_connect.argtypes = [c_void_p, c_void_p, c_char_p, c_int]
